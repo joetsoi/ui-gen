@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <article>
+        <h1>Game Jam Button Generator</h1>
+        <div id=container>
+            <div id=controls>
+                <div class="ctrl">
+                    <label for="value">Text</label>
+                    <textarea id="value" class="read-value" >Fire!</textarea>
+                </div>
+
+                <div class="ctrl">
+                    <label for="border-radius">Font family</label>
+                    <input id="font-family" class="read-value" list="fonts" type="text" value="Arial" >
+                    <datalist id="fonts">
+                        <option value="Arial">
+                        <option value="Verdana">
+                        <option value="Comic Sans MS">
+                        <option value="Courier New">
+                        <option value="Lucida Console">
+                    </datalist>
+                </div>
+
+                <div class="ctrl">
+                  <label for="color">Font color</label>
+                  <input type="color" id="color" class="read-value">
+                </div>
+
+                <div class="ctrl">
+                  <label for="font-size">Font size</label>
+                  <input type="number" class="read-value" id="font-size" data-postfix="pt" value="12" min="0">
+                </div>
+
+                <div class="ctrl">
+                  <label for="font-weight">Font weight</label>
+                  <select class="read-value" id="font-weight">
+                      <option value="lighter">Lighter</option>
+                      <option value="normal">Normal</option>
+                      <option value="bold">Bold</option>
+                      <option value="bolder">Bolder</option>
+                   </select>
+                </div>
+
+                <div class="ctrl">
+                  <label for="background-color">Background color</label>
+                  <input type="color" id="background-color" class="read-value" value="#ffffff">
+                </div>
+
+                <div class="ctrl">
+                  <label for="border-radius">Border radius</label>
+                  <input type="number" class="read-value" id="border-radius" data-postfix="px" value="12" min="0">
+                </div>
+
+                <div class="ctrl">
+                  <label for="margin">Margin</label>
+                  <input type="number" class="read-value" id="margin" data-postfix="px" value="5" min="0">
+                </div>
+
+                <div class="ctrl">
+                  <label for="padding-top">Padding</label>
+                  <input type="number" class="padding read-value" id="padding" data-postfix="px" value="5" min="0">
+                  <input type="number" class="padding read-value" id="padding-top" data-postfix="px" value="5" min="0" disabled>
+                  <input type="number" class="padding read-value" id="padding-right" data-postfix="px" value="20" min="0" disabled>
+                  <input type="number" class="padding read-value" id="padding-bottom" data-postfix="px" value="5" min="0" disabled>
+                  <input type="number" class="padding read-value" id="padding-left" data-postfix="px" value="20" min="0" disabled>
+                  <input type="checkbox" class="toggle" data-val="padding">
+                </div>
+
+                <div class="ctrl">
+                  <label for="border-color">Border color</label>
+                  <input type="color" id="border-color" class="border read-value">
+                  <input type="color" id="border-top-color" class="border read-value" disabled>
+                  <input type="color" id="border-right-color" class="border read-value" disabled>
+                  <input type="color" id="border-bottom-color" class="border read-value" disabled>
+                  <input type="color" id="border-left-color" class="border read-value" disabled>
+                  <input type="checkbox" class="toggle" data-val="border">
+                </div>
+
+                <div class="ctrl">
+                  <label for="padding">Border</label>
+                  <input type="number" class="border-width read-value" id="border-width" data-postfix="px" value="2" min="0">
+                  <input type="number" class="border-width read-value" id="border-top-width" data-postfix="px" value="2" min="0" disabled>
+                  <input type="number" class="border-width read-value" id="border-right-width" data-postfix="px" value="2" min="0" disabled>
+                  <input type="number" class="border-width read-value" id="border-bottom-width" data-postfix="px" value="2" min="0" disabled>
+                  <input type="number" class="border-width read-value" id="border-left-width" data-postfix="px" value="2" min="0" disabled>
+                  <input type="checkbox" class="toggle" data-val="border-width">
+                </div>
+                <div class="ctrl">
+                    <label for="value">Extra CSS</label>
+                    <textarea id="extracss"></textarea>
+                </div>
+            </div>
+            <div id="preview">
+                <button id="button-preview">Fire!</button>
+            </div>
+        </div>
+    </article>
+<script src="js/control.js"></script>
+</body>
+</html>
